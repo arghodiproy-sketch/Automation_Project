@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# pytest
+.pytest_cache/
+.cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs & reports
+logs/
+*.log
+report.html
+reports/
+screenshots/
+assets/
+
+# WebDriver Manager cache
+.wdm/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Exclude entire tools/ folder — large SDKs/binaries not needed in source control
+tools/

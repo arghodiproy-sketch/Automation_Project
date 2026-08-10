@@ -1,0 +1,26 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# requirements.txt
+# Install with:  pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Test runner ───────────────────────────────────────────────────────────────
+pytest>=7.4.0
+
+# ── Desktop automation ────────────────────────────────────────────────────────
+# pywinauto: automates native Windows GUI apps via UIA or Win32 accessibility
+pywinauto>=0.6.8
+
+# ── Mobile automation ─────────────────────────────────────────────────────────
+# Appium-Python-Client: Python bindings for the Appium automation server
+Appium-Python-Client>=3.1.0
+
+# ── Web automation ────────────────────────────────────────────────────────────
+# selenium: the standard library for browser automation
+selenium>=4.18.0
+# webdriver-manager: auto-downloads the correct ChromeDriver/GeckoDriver
+webdriver-manager>=4.0.1
+
+# ── Reporting (optional — highly valued in interviews) ────────────────────────
+# pytest-html: generates an HTML test report
+#   Usage: pytest --html=reports/report.html --self-contained-html
+pytest-html>=4.1.0
