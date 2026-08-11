@@ -1,0 +1,2 @@
+11:55:54 [[32mINFO    [0m] WDM: ====== WebDriver manager ======
+11:55:56 [[32mINFO    [0m] WDM: Driver [C:\Users\RoAr604\.wdm\drivers\chromedriver\win64\151.0.7922.77\chromedriver-win64/chromedriver.exe] found in cache by browser version

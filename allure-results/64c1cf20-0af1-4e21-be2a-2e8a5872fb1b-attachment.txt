@@ -1,0 +1,7 @@
+Automated software testing with Python
+Is Python a good language to learn for Automation testing?
+Python Test Automation: Seven Options for More Efficient ...
+Python Test Automation: Best Frameworks for Software QA
+Automation Testing with Python : A Comprehensive Guide
+Google IT Automation with Python Professional Certificate
+Pytest: Getting started with automated testing for Python

@@ -1,0 +1,4 @@
+11:55:35 [INFO    ] drivers.web_driver — Starting chrome (headless=False)
+11:55:39 [INFO    ] drivers.web_driver — Chrome driver ready.
+11:55:40 [INFO    ] pages.web.google_home_page — Opening: https://www.google.com
+11:55:50 [INFO    ] drivers.web_driver — Browser closed.

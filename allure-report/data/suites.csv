@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"
+The Google home page should load and the title should contain 'Google'.
+This is a smoke test — verify the site is reachable before deeper tests.
+","8006","Google homepage loads with correct title","tests.web","Tue Aug 11 11:55:40 IST 2026","passed","Tue Aug 11 11:55:48 IST 2026","","test_google_search","",""
+"Performing a search should load the results page with visible results.","27148","Search returns at least one result","tests.web","Tue Aug 11 11:55:58 IST 2026","passed","Tue Aug 11 11:56:25 IST 2026","","test_google_search","",""

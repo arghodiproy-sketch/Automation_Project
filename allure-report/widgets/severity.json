@@ -1,0 +1,1 @@
+[{"uid":"4cad9803982a9e53","name":"Search returns at least one result","time":{"start":1786429558184,"stop":1786429585332,"duration":27148},"status":"passed","severity":"critical"},{"uid":"faf474bcabf66a8e","name":"Google homepage loads with correct title","time":{"start":1786429540002,"stop":1786429548008,"duration":8006},"status":"passed","severity":"blocker"}]

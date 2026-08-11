@@ -1,0 +1,8 @@
+11:21:46 [[32mINFO    [0m] WDM: ====== WebDriver manager ======
+11:21:51 [[32mINFO    [0m] WDM: Get LATEST chromedriver version for google-chrome
+11:21:54 [[32mINFO    [0m] WDM: Get LATEST chromedriver version for google-chrome
+11:21:55 [[32mINFO    [0m] WDM: WebDriver version 151.0.7922.77 selected
+11:21:55 [[32mINFO    [0m] WDM: Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.77/win64/chromedriver-win64.zip
+11:21:55 [[32mINFO    [0m] WDM: About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.77/win64/chromedriver-win64.zip
+11:21:58 [[32mINFO    [0m] WDM: Driver downloading response is 200
+11:23:41 [[32mINFO    [0m] WDM: Driver has been saved in cache [C:\Users\RoAr604\.wdm\drivers\chromedriver\win64\151.0.7922.77]

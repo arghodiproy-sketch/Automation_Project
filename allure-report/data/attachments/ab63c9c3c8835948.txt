@@ -1,0 +1,9 @@
+11:23:58 [INFO    ] drivers.web_driver — Starting chrome (headless=False)
+11:24:03 [INFO    ] drivers.web_driver — Chrome driver ready.
+11:24:03 [INFO    ] pages.web.google_home_page — Opening: https://www.google.com
+11:24:10 [INFO    ] pages.web.google_home_page — Typing query: 'Python automation testing'
+11:24:10 [INFO    ] pages.web.google_home_page — Submitting search.
+11:24:11 [INFO    ] pages.web.google_results_page — Waiting for search results…
+11:24:27 [INFO    ] pages.web.google_results_page — Results page loaded.
+11:24:27 [INFO    ] pages.web.google_results_page — Found 7 result titles.
+11:24:29 [INFO    ] drivers.web_driver — Browser closed.
