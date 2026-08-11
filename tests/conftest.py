@@ -26,6 +26,7 @@ Yield fixtures:
     Teardown always runs — even if the test or setup raises an exception.
 """
 
+import allure
 import pytest
 
 from drivers.desktop_driver import DesktopDriver
@@ -116,3 +117,25 @@ def web_driver(request):
     driver = drv.start()
     yield driver
     drv.quit()
+
+
+# ── Allure: screenshot on failure ─────────────────────────────────────────────
+
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    """
+    After each test phase (setup / call / teardown), if the test FAILED
+    and a Selenium web_driver is available, capture a screenshot and
+    attach it to the Allure report automatically.
+    """
+    outcome = yield
+    report  = outcome.get_result()
+
+    if report.when == "call" and report.failed:
+        driver = item.funcargs.get("web_driver")
+        if driver:
+            allure.attach(
+                driver.get_screenshot_as_png(),
+                name="Screenshot on failure",
+                attachment_type=allure.attachment_type.PNG,
+            )

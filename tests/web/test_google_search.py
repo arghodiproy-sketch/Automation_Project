@@ -27,20 +27,56 @@ Interview Tip — Core Selenium skills demonstrated here:
     • Select dropdowns: from selenium.webdriver.support.ui import Select
 """
 
+import allure
 import pytest
 
 from pages.web.google_home_page import GoogleHomePage
+from pages.web.google_results_page import GoogleResultsPage
 
 
+@allure.feature("Google Web Search")
+@allure.story("Homepage")
+@allure.title("Google homepage loads with correct title")
+@allure.severity(allure.severity_level.BLOCKER)
 @pytest.mark.web
 def test_google_homepage_loads_successfully(web_driver):
     """
     The Google home page should load and the title should contain 'Google'.
     This is a smoke test — verify the site is reachable before deeper tests.
     """
-    page = GoogleHomePage(web_driver)
-    page.open()
+    with allure.step("Open Google homepage"):
+        page = GoogleHomePage(web_driver)
+        page.open()
 
-    assert "Google" in web_driver.title, (
-        f"Unexpected page title: '{web_driver.title}'"
-    )
+    with allure.step("Verify page title contains 'Google'"):
+        assert "Google" in web_driver.title, (
+            f"Unexpected page title: '{web_driver.title}'"
+        )
+
+
+@allure.feature("Google Web Search")
+@allure.story("Search Results")
+@allure.title("Search returns at least one result")
+@allure.severity(allure.severity_level.CRITICAL)
+@pytest.mark.web
+def test_search_returns_at_least_one_result(web_driver):
+    """Performing a search should load the results page with visible results."""
+    with allure.step("Open Google homepage"):
+        home = GoogleHomePage(web_driver)
+        home.open()
+
+    with allure.step("Search for 'Python automation testing'"):
+        home.search("Python automation testing")
+
+    with allure.step("Wait for results page to load"):
+        results = GoogleResultsPage(web_driver)
+        results.wait_for_results()
+
+    with allure.step("Assert at least one result is returned"):
+        titles = results.get_result_titles()
+        allure.attach(
+            "\n".join(titles),
+            name="Result Titles",
+            attachment_type=allure.attachment_type.TEXT,
+        )
+        assert len(titles) > 0, "Expected at least one result heading, got none."

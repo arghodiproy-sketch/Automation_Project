@@ -24,3 +24,8 @@ webdriver-manager>=4.0.1
 # pytest-html: generates an HTML test report
 #   Usage: pytest --html=reports/report.html --self-contained-html
 pytest-html>=4.1.0
+
+# allure-pytest: rich interactive report (most popular in enterprise teams)
+#   Step 1 — run tests:    pytest --alluredir=allure-results
+#   Step 2 — open report:  allure serve allure-results
+allure-pytest>=2.13.0
