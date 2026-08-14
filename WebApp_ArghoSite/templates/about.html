@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}About — ArghoSite{% endblock %}
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <h2 class="fw-bold mb-4"><i class="fas fa-info-circle text-primary me-2"></i>About ArghoSite</h2>
+      <p class="lead">ArghoSite is an AI-powered job finder that reads your resume, extracts your skills,
+      and searches LinkedIn and Naukri to surface the best-matching job openings — ranked by a skill-match score.</p>
+
+      <h5 class="fw-bold mt-4">Tech Stack</h5>
+      <ul>
+        <li><strong>Flask</strong> — Python web framework</li>
+        <li><strong>pypdf / python-docx</strong> — Resume parsing</li>
+        <li><strong>BeautifulSoup4 + requests</strong> — Job board scraping</li>
+        <li><strong>Bootstrap 5</strong> — Responsive UI</li>
+      </ul>
+
+      <h5 class="fw-bold mt-4">Part of the Automation Framework</h5>
+      <p>This web app lives inside <code>C:\Automation_Desktop_Mobile_Web\WebApp_ArghoSite\</code>
+      and can be tested using the Selenium Page Objects in the parent framework.</p>
+
+      <a href="/" class="btn btn-primary rounded-3 mt-3">
+        <i class="fas fa-arrow-left me-2"></i>Back to Home
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

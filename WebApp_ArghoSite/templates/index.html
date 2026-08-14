@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}ArghoSite — Upload Resume & Find Jobs{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<div class="hero text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold mb-3">
+      <i class="fas fa-file-upload me-3"></i>Upload Resume. Find Best Jobs.
+    </h1>
+    <p class="lead mb-0">
+      AI-powered matching across <strong>LinkedIn</strong> &amp; <strong>Naukri</strong>
+      &mdash; ranked by your skill match score.
+    </p>
+  </div>
+</div>
+
+<!-- Upload Form -->
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-7">
+      <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-body p-5">
+          <h4 class="fw-bold mb-4 text-center">
+            <i class="fas fa-search-dollar text-primary me-2"></i>Find Your Next Role
+          </h4>
+
+          <form method="POST" action="/search" enctype="multipart/form-data">
+
+            <!-- File Upload -->
+            <div class="mb-4">
+              <label class="form-label fw-semibold">
+                <i class="fas fa-paperclip me-1 text-primary"></i>Your Resume
+              </label>
+              <input type="file" name="resume" class="form-control form-control-lg"
+                     accept=".pdf,.docx,.doc,.txt" required/>
+              <small class="text-muted">Supported: PDF, DOCX, TXT &bull; Max 5 MB</small>
+            </div>
+
+            <!-- Location -->
+            <div class="mb-4">
+              <label class="form-label fw-semibold">
+                <i class="fas fa-map-marker-alt me-1 text-danger"></i>Preferred Location
+              </label>
+              <select name="location" class="form-select form-select-lg">
+                <option value="India">India (All)</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Pune">Pune</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi / NCR</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Remote">Remote</option>
+              </select>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary btn-lg w-100 rounded-3 fw-bold">
+              <i class="fas fa-magic me-2"></i>Analyse &amp; Find Best Jobs
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- How it works -->
+      <div class="mt-5">
+        <h5 class="fw-bold text-center mb-4">How It Works</h5>
+        <div class="row g-3 text-center">
+          <div class="col-4">
+            <div class="card border-0 bg-white shadow-sm rounded-4 p-3">
+              <div class="fs-2 text-primary mb-2"><i class="fas fa-upload"></i></div>
+              <small class="fw-semibold">1. Upload Resume</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card border-0 bg-white shadow-sm rounded-4 p-3">
+              <div class="fs-2 text-success mb-2"><i class="fas fa-brain"></i></div>
+              <small class="fw-semibold">2. AI Extracts Skills</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card border-0 bg-white shadow-sm rounded-4 p-3">
+              <div class="fs-2 text-warning mb-2"><i class="fas fa-trophy"></i></div>
+              <small class="fw-semibold">3. Best Jobs Ranked</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
