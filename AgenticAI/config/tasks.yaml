@@ -1,0 +1,12 @@
+research_task:
+  description: "Research the latest developments, trends, and key facts about {topic}. Focus on credible sources. Provide a comprehensive summary with citations."
+  expected_output: "A structured research summary with at least 5 key findings, each supported by a source reference."
+
+analysis_task:
+  description: "Analyze the research findings provided. Identify patterns, implications, and rank findings by significance. Note any conflicts."
+  expected_output: "An analytical report with ranked findings and strategic implications."
+
+writing_task:
+  description: "Using the research and analysis, write a polished final report on {topic}. Include Executive Summary, Findings, Analysis, Recommendations."
+  expected_output: "A full markdown report (~800 words) saved to outputs/final_report.md"
+  output_file: "outputs/final_report.md"
